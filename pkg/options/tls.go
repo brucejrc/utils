@@ -1,7 +1,6 @@
 package options
 
 import (
-	"crypto/tls"
 	"fmt"
 	"github.com/spf13/pflag"
 )
@@ -37,20 +36,20 @@ func (o *TLSOptions) AddFlags(fs *pflag.FlagSet, prefixes ...string) {
 
 }
 
-func (o *TLSOptions) MustTLSConfig() *tls.Config {
-	if !o.UseTLS {
-		return nil, nil
-	}
-
-	tlsConfig := &tls.Config{
-		InsecureSkipVerify: o.InsecureSkipVerify,
-	}
-
-}
-
-func (o *TLSOptions) TLSConfig() (*tls.Config, error) {
-
-}
+//func (o *TLSOptions) MustTLSConfig() *tls.Config {
+//	if !o.UseTLS {
+//		return nil
+//	}
+//
+//	tlsConfig := &tls.Config{
+//		InsecureSkipVerify: o.InsecureSkipVerify,
+//	}
+//
+//}
+//
+//func (o *TLSOptions) TLSConfig() (*tls.Config, error) {
+//
+//}
 
 func (o *TLSOptions) Scheme() string {
 	if o.UseTLS {

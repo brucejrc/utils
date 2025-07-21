@@ -5,6 +5,7 @@ go 1.24.1
 require (
 	github.com/gin-gonic/gin v1.10.1
 	github.com/go-kratos/kratos/v2 v2.8.4
+	github.com/sony/sonyflake v1.3.0
 	github.com/spf13/pflag v1.0.6
 	github.com/stretchr/testify v1.9.0
 	go.uber.org/zap v1.27.0
